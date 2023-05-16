@@ -11,7 +11,7 @@
 		2B04FEC02A0DD64C0023B1B3 /* LocationServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04FEBF2A0DD64C0023B1B3 /* LocationServiceType.swift */; };
 		2B04FEC22A0DD68B0023B1B3 /* StubLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04FEC12A0DD68B0023B1B3 /* StubLocationService.swift */; };
 		2B04FEC52A0DD7B30023B1B3 /* WeatherClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04FEC42A0DD7B30023B1B3 /* WeatherClientType.swift */; };
-		2B04FEC92A0DD8AC0023B1B3 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04FEC82A0DD8AC0023B1B3 /* WeatherResponse.swift */; };
+		2B04FEC92A0DD8AC0023B1B3 /* CurrentConditionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04FEC82A0DD8AC0023B1B3 /* CurrentConditionsResponse.swift */; };
 		2B04FECB2A0DD9190023B1B3 /* StubWeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04FECA2A0DD9190023B1B3 /* StubWeatherClient.swift */; };
 		2B04FECD2A0DD9670023B1B3 /* Brooklyn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04FECC2A0DD9670023B1B3 /* Brooklyn.swift */; };
 		2B04FED02A0DDB880023B1B3 /* StubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04FECF2A0DDB880023B1B3 /* StubData.swift */; };
@@ -20,6 +20,10 @@
 		2B58098B2A0BE57B00AA97F6 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58098A2A0BE57B00AA97F6 /* DayViewController.swift */; };
 		2B58098D2A0BE59100AA97F6 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58098C2A0BE59100AA97F6 /* WeekView.swift */; };
 		2B58098F2A0BE5B200AA97F6 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58098E2A0BE5B200AA97F6 /* WeekViewController.swift */; };
+		2BD627102A1405D100FEA77D /* ForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD6270F2A1405D100FEA77D /* ForecastResponse.swift */; };
+		2BD627122A14084600FEA77D /* BrooklynForecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BD627112A14084600FEA77D /* BrooklynForecast.json */; };
+		2BD627142A1408EC00FEA77D /* StubDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD627132A1408EC00FEA77D /* StubDataTests.swift */; };
+		2BD627192A140CE500FEA77D /* BrooklynCurrentConditions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BD627182A140CE500FEA77D /* BrooklynCurrentConditions.json */; };
 		2BEE924F2A0A78A50032CEB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE924E2A0A78A50032CEB5 /* AppDelegate.swift */; };
 		2BEE92512A0A78A50032CEB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE92502A0A78A50032CEB5 /* SceneDelegate.swift */; };
 		2BEE92582A0A78A60032CEB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BEE92572A0A78A60032CEB5 /* Assets.xcassets */; };
@@ -51,7 +55,7 @@
 		2B04FEBF2A0DD64C0023B1B3 /* LocationServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceType.swift; sourceTree = "<group>"; };
 		2B04FEC12A0DD68B0023B1B3 /* StubLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLocationService.swift; sourceTree = "<group>"; };
 		2B04FEC42A0DD7B30023B1B3 /* WeatherClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClientType.swift; sourceTree = "<group>"; };
-		2B04FEC82A0DD8AC0023B1B3 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		2B04FEC82A0DD8AC0023B1B3 /* CurrentConditionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionsResponse.swift; sourceTree = "<group>"; };
 		2B04FECA2A0DD9190023B1B3 /* StubWeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubWeatherClient.swift; sourceTree = "<group>"; };
 		2B04FECC2A0DD9670023B1B3 /* Brooklyn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brooklyn.swift; sourceTree = "<group>"; };
 		2B04FECF2A0DDB880023B1B3 /* StubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubData.swift; sourceTree = "<group>"; };
@@ -60,6 +64,10 @@
 		2B58098A2A0BE57B00AA97F6 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 		2B58098C2A0BE59100AA97F6 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		2B58098E2A0BE5B200AA97F6 /* WeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
+		2BD6270F2A1405D100FEA77D /* ForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastResponse.swift; sourceTree = "<group>"; };
+		2BD627112A14084600FEA77D /* BrooklynForecast.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BrooklynForecast.json; sourceTree = "<group>"; };
+		2BD627132A1408EC00FEA77D /* StubDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataTests.swift; sourceTree = "<group>"; };
+		2BD627182A140CE500FEA77D /* BrooklynCurrentConditions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BrooklynCurrentConditions.json; sourceTree = "<group>"; };
 		2BEE924B2A0A78A50032CEB5 /* ThoughtWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEE924E2A0A78A50032CEB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BEE92502A0A78A50032CEB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 		2B04FEBB2A0DB7480023B1B3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2BD6270E2A1405BE00FEA77D /* DTO */,
 				2B04FEC32A0DD75C0023B1B3 /* Weather */,
 				2B04FEBE2A0DD6400023B1B3 /* Location */,
 			);
@@ -121,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				2B04FEC42A0DD7B30023B1B3 /* WeatherClientType.swift */,
-				2B04FEC82A0DD8AC0023B1B3 /* WeatherResponse.swift */,
 				2B04FECA2A0DD9190023B1B3 /* StubWeatherClient.swift */,
 			);
 			path = Weather;
@@ -132,6 +140,8 @@
 			children = (
 				2B04FECF2A0DDB880023B1B3 /* StubData.swift */,
 				2B04FECC2A0DD9670023B1B3 /* Brooklyn.swift */,
+				2BD627112A14084600FEA77D /* BrooklynForecast.json */,
+				2BD627182A140CE500FEA77D /* BrooklynCurrentConditions.json */,
 			);
 			path = StubData;
 			sourceTree = "<group>";
@@ -161,6 +171,15 @@
 				2B58098A2A0BE57B00AA97F6 /* DayViewController.swift */,
 			);
 			path = DayView;
+			sourceTree = "<group>";
+		};
+		2BD6270E2A1405BE00FEA77D /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				2B04FEC82A0DD8AC0023B1B3 /* CurrentConditionsResponse.swift */,
+				2BD6270F2A1405D100FEA77D /* ForecastResponse.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		2BEE92422A0A78A50032CEB5 = {
@@ -203,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				2BEE92652A0A78A70032CEB5 /* ThoughtWeatherTests.swift */,
+				2BD627132A1408EC00FEA77D /* StubDataTests.swift */,
 			);
 			path = ThoughtWeatherTests;
 			sourceTree = "<group>";
@@ -320,6 +340,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD627192A140CE500FEA77D /* BrooklynCurrentConditions.json in Resources */,
+				2BD627122A14084600FEA77D /* BrooklynForecast.json in Resources */,
 				2BEE925B2A0A78A60032CEB5 /* LaunchScreen.storyboard in Resources */,
 				2BEE92582A0A78A60032CEB5 /* Assets.xcassets in Resources */,
 				2B5809842A0BE2F400AA97F6 /* Home.storyboard in Resources */,
@@ -351,11 +373,12 @@
 				2B04FEC02A0DD64C0023B1B3 /* LocationServiceType.swift in Sources */,
 				2B58098F2A0BE5B200AA97F6 /* WeekViewController.swift in Sources */,
 				2B58098D2A0BE59100AA97F6 /* WeekView.swift in Sources */,
+				2BD627102A1405D100FEA77D /* ForecastResponse.swift in Sources */,
 				2B04FEC52A0DD7B30023B1B3 /* WeatherClientType.swift in Sources */,
 				2B04FEBD2A0DB7540023B1B3 /* LocationService.swift in Sources */,
 				2B04FECD2A0DD9670023B1B3 /* Brooklyn.swift in Sources */,
 				2B58098B2A0BE57B00AA97F6 /* DayViewController.swift in Sources */,
-				2B04FEC92A0DD8AC0023B1B3 /* WeatherResponse.swift in Sources */,
+				2B04FEC92A0DD8AC0023B1B3 /* CurrentConditionsResponse.swift in Sources */,
 				2B5809892A0BE54B00AA97F6 /* DayView.swift in Sources */,
 				2BEE924F2A0A78A50032CEB5 /* AppDelegate.swift in Sources */,
 				2BEE92512A0A78A50032CEB5 /* SceneDelegate.swift in Sources */,
@@ -369,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BEE92662A0A78A70032CEB5 /* ThoughtWeatherTests.swift in Sources */,
+				2BD627142A1408EC00FEA77D /* StubDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

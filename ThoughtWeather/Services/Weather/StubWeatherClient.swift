@@ -8,7 +8,12 @@
 import Foundation
 
 class StubWeatherClient: WeatherClientType {
-    func getWeather(date: Date, latitude: Double, longitude: Double) async -> WeatherResponse {
-        return StubData.Brooklyn.weatherResponse
+    // TODO is date needed?
+    func getCurrentConditions(date: Date, latitude: Double, longitude: Double) async -> CurrentConditionsResponse? {
+        return StubData.Brooklyn.currentConditionsResponse
+    }
+    
+    func getForecast(latitude: Double, longitude: Double) async -> ForecastResponse? {
+        return StubData.Brooklyn.forecastResponse
     }
 }

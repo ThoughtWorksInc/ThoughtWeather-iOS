@@ -1,12 +1,12 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let weather = try? JSONDecoder().decode(Weather.self, from: jsonData)
+//   let currentConditionsResponse = try? JSONDecoder().decode(CurrentConditionsResponse.self, from: jsonData)
 
 import Foundation
 
-// MARK: - Weather
-struct WeatherResponse: Codable {
+// MARK: - CurrentConditionsResponse
+struct CurrentConditionsResponse: Codable {
     let coord: Coord
     let weather: [WeatherElement]
     let base: String
@@ -19,7 +19,6 @@ struct WeatherResponse: Codable {
     let timezone, id: Int
     let name: String
     let cod: Int
-    
     
     // MARK: - Clouds
     struct Clouds: Codable {
