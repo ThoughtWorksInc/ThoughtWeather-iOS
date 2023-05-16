@@ -11,9 +11,6 @@ import CoreLocation
 class StubLocationService: LocationServiceType {
     func getLocation() async -> CLLocation? {
         // Beautiful Crown Heights, Brooklyn
-        return CLLocation(
-            latitude: StubData.brooklyn.latitude,
-            longitude: StubData.brooklyn.longitude
-        )
+        return StubData.Brooklyn.clLocation
     }
 }

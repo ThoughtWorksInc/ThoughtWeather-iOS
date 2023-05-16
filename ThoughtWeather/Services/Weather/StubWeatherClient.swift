@@ -9,6 +9,6 @@ import Foundation
 
 class StubWeatherClient: WeatherClientType {
     func getWeather(date: Date, latitude: Double, longitude: Double) async -> WeatherResponse {
-        return StubData.weather
+        return StubData.Brooklyn.weatherResponse
     }
 }
