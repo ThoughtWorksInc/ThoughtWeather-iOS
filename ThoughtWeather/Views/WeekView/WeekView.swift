@@ -9,5 +9,6 @@ import Foundation
 import UIKit
 
 class WeekView: UIView {
+    @IBOutlet weak var tableView: UITableView?
     
 }
