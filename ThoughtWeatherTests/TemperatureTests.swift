@@ -41,4 +41,10 @@ final class TemperatureTests: XCTestCase {
         
         XCTAssertEqual(Temperature(celsius: 0.0), temperature)
     }
+    
+    func testShouldCompare() {
+        XCTAssertLessThan(Temperature(celsius: 0.0), Temperature(celsius: 100.0))
+        XCTAssertGreaterThan(Temperature(celsius: 20.0), Temperature(celsius: 10.0))
+        XCTAssertEqual(Temperature(celsius: 0.0), Temperature(celsius: 0.0))
+    }
 }

@@ -42,3 +42,9 @@ struct Temperature: Equatable {
         self.init(kelvin: kelvinOffset + (fahrenheit - 32) * 5/9)
     }
 }
+
+extension Temperature: Comparable {
+    static func < (lhs: Temperature, rhs: Temperature) -> Bool {
+        return lhs.kelvinValue < rhs.kelvinValue
+    }
+}
