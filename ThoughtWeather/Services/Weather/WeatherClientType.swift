@@ -8,6 +8,5 @@
 import Foundation
 
 protocol WeatherClientType {
-    func getCurrentConditions(latitude: Double, longitude: Double) async -> CurrentConditionsResponse?
     func getForecast(latitude: Double, longitude: Double) async -> ForecastResponse?
 }

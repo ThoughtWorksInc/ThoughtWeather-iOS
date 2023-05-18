@@ -1,11 +1,9 @@
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let forecast = try? JSONDecoder().decode(Forecast.self, from: jsonData)
+// This file was generated from JSON Schema using quicktype.io.
+// It's based on the schema returned by https://api.openweathermap.org/data/2.5/forecast?lat=[latitude]&lon=[longitude]&appid=[appId]
 
 import Foundation
 
-// MARK: - Forecast
+// MARK: - ForecastResponse
 struct ForecastResponse: Codable {
     let timeForecasts: [TimeForecast]
     let city: City

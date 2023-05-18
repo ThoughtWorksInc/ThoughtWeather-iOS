@@ -18,12 +18,6 @@ final class StubDataTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testShouldLoadGoodCurrentConditions() throws {
-        let currentConditionsResponse = StubData.Brooklyn.currentConditionsResponse
-        XCTAssertEqual("stations", currentConditionsResponse?.base)
-        XCTAssertEqual("Clear", currentConditionsResponse?.weather.first?.main)
-    }
-
     func testShouldLoadGoodForecast() throws {
         let forecastResponse = StubData.Brooklyn.forecastResponse
         XCTAssertEqual(297.95, forecastResponse?.timeForecasts.first?.temperatures.temp)

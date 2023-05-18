@@ -1,12 +1,7 @@
-//
-//  WeatherForecast.swift
-//  ThoughtWeather
-//
-//  Created by Michael Chaffee on 2023-05-16.
-//
-
 import Foundation
 
+// WeatherForecast is a domain object for the weather forecast.
+// The initializer translates from a ForecastResponse DTO into this domain object.
 struct WeatherForecast {
     let allItems: [HourlyItem]
     let days: [Day]
@@ -32,7 +27,7 @@ struct WeatherForecast {
             }
         }
         // daysDict now has lists of hourlyItems, one for each date.
-        // We'll aggregate these into Day structs that sit within the WeatherForecast.
+        // We'll aggregate these into Day structs that are held by the WeatherForecast.
         let result = daysDict.map { day, hourlyItems in
             let lowTemperature = hourlyItems.map({ $0.lowTemperature }).min(by: <)
             let highTemperature = hourlyItems.map({ $0.highTemperature }).max(by: <)

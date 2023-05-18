@@ -14,8 +14,6 @@ extension StubData {
 
         static let clLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
 
-        static let currentConditionsResponse: CurrentConditionsResponse? = loadJson(fileName: "BrooklynCurrentConditions")
-        
         static let forecastResponse: ForecastResponse? = loadJson(fileName: "BrooklynForecast")
     }
 }
