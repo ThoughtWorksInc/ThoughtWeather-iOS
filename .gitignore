@@ -91,3 +91,7 @@ iOSInjectionProject/
 
 # vim
 *.swp
+
+# secrets
+Config.swift
+talisman_report/
