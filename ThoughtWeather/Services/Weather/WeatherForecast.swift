@@ -16,9 +16,13 @@ struct WeatherForecast {
         self.days = WeatherForecast.buildDays(hourlyItems: self.allItems)
     }
 
+    // This method is called by the initializer, to translate the hourly elements in the
+    // response DTO into a collection of WeatherForecast.Day summary models.
     private static func buildDays(hourlyItems: [HourlyItem]) -> [Day] {
         var daysDict = [Date : [HourlyItem]]()
         
+        // The collection of hourlyItems comes at three-hour intervals for five days.
+        // Here, split the hourlyItems arrays into one for each calendar day (within a dictionary).
         hourlyItems.forEach { hourlyItem in
             let day = hourlyItem.date.day
             if daysDict[day] == nil {
@@ -27,8 +31,8 @@ struct WeatherForecast {
                 daysDict[day]?.append(hourlyItem)
             }
         }
-        // daysDict now has a list of hourlyItems for each date.  Need to aggregate this into Day structs
-        // TODO need to use hourly temp_min, temp_max from response
+        // daysDict now has lists of hourlyItems, one for each date.
+        // We'll aggregate these into Day structs that sit within the WeatherForecast.
         let result = daysDict.map { day, hourlyItems in
             let lowTemperature = hourlyItems.map({ $0.lowTemperature }).min(by: <)
             let highTemperature = hourlyItems.map({ $0.highTemperature }).max(by: <)
@@ -60,7 +64,9 @@ struct WeatherForecast {
     }
 }
 
-fileprivate typealias DayComponents = (year: Int, month: Int, day: Int)
+// Date.day is a convenience extension to get a Date object without hour/minute/second,
+// in the device's current time zone.  I.e. U.S. EDT is UTC-0400, so:
+// '2023-05-17T14:55:00-0400'.day == '2023-05-17T00:00:00-0400' == '2023-05-17T04:00:00Z'
 fileprivate extension Date {
     var day: Date {
         let calendar = Calendar.current

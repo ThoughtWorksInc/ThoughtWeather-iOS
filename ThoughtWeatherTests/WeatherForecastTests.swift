@@ -36,7 +36,7 @@ final class WeatherForecastTests: XCTestCase {
         XCTAssertEqual(297.95, hourlyItem.temperature.kelvin)
         XCTAssertEqual(296.53, hourlyItem.lowTemperature.kelvin)
         XCTAssertEqual(297.96, hourlyItem.highTemperature.kelvin)
-        // TODO add more properties
     }
     
 }
+    
