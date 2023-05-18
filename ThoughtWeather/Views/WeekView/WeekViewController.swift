@@ -6,22 +6,30 @@
 //
 
 import UIKit
+import CoreLocation
 
 class WeekViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
+
+    var locationService: LocationServiceType = LocationService()
     var data: WeatherClientType = WeatherClient()
     
     var items: [ForecastResponse.TimeForecast] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.title = "Weather"
         
         tableView.dataSource = self
         
         Task { [weak self] in
-            let response = try! await self?.data.getForecast(latitude: 1.0, longitude: 1.0)?.timeForecasts.filter({ item in
+            guard let location = await self?.locationService.getLocation() else {
+                fatalError("Could not retrieve device location")
+            }
+            let latitude = location.coordinate.latitude
+            let longitude = location.coordinate.longitude
+            
+            let response = try! await self?.data.getForecast(latitude: latitude, longitude: longitude)?.timeForecasts.filter({ item in
                 item.dtTxt.contains("00:00:00")
             })
             print(response)
@@ -47,3 +55,4 @@ extension WeekViewController: UITableViewDataSource {
         return cell
     }
 }
+

@@ -8,16 +8,17 @@ enum LocationError: Error {
     case unableToRetrieve
 }
 
-class LocationService {
+// LocationService is a simple wrapper that converts CLLocationManager's delegate events
+// into a more modern async/await pattern.  It does the job but needs hardening before use
+// in a production app.
+class LocationService: LocationServiceType {
     private let locationManager = CLLocationManager()
     
+    private var locationAuthorizationDelegate: LocationAuthorizationDelegate?
+    private var locationDelegate: LocationDelegate?
+    
     func getLocation() async -> CLLocation? {
-        
-        print("getLocation() called")
         let isAuthorized: Bool = await requestLocationPermission()
-        
-        print("isAuthorized: \(isAuthorized)")
-        
         guard isAuthorized else {
             return nil
         }
@@ -30,6 +31,12 @@ class LocationService {
     }
 
     private func requestLocationPermission() async -> Bool {
+        // Re-fetching location permission causes a hang
+        let initialStatus = locationManager.authorizationStatus
+        guard initialStatus == .notDetermined else {
+            return [CLAuthorizationStatus.authorizedAlways, .authorizedWhenInUse].contains(initialStatus)
+        }
+
         print("requestLocationPermission() called")
         return await withCheckedContinuation { continuation in
             let authorizationHandler: (CLAuthorizationStatus) -> Void = { authorizationStatus in
@@ -42,14 +49,14 @@ class LocationService {
                     continuation.resume(returning: false)
                 }
             }
-            let locationAuthorizationDelegate = LocationAuthorizationDelegate(handler: authorizationHandler)
+            self.locationAuthorizationDelegate = LocationAuthorizationDelegate(handler: authorizationHandler)
             locationManager.delegate = locationAuthorizationDelegate
             locationManager.requestWhenInUseAuthorization()
         }
     }
     
     private func requestLocation() async throws -> CLLocation {
-        let location: CLLocation = try await withUnsafeThrowingContinuation { continuation in
+        let location: CLLocation = try await withCheckedThrowingContinuation { continuation in
             let locationHandler: (CLLocation?, Error?) -> Void = { location, error in
                 if let error = error {
                     continuation.resume(throwing: error)
@@ -59,7 +66,7 @@ class LocationService {
                     continuation.resume(throwing: LocationError.unableToRetrieve)
                 }
             }
-            let locationDelegate = LocationDelegate(handler: locationHandler)
+            self.locationDelegate = LocationDelegate(handler: locationHandler)
             locationManager.delegate = locationDelegate
             locationManager.requestLocation()
         }

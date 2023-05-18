@@ -18,6 +18,7 @@
 		2B0534FB2A14472E001CC5E2 /* TemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0534FA2A14472E001CC5E2 /* TemperatureTests.swift */; };
 		2B55FB772A15C0CE00C17E00 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55FB762A15C0CE00C17E00 /* WeatherClient.swift */; };
 		2B55FB792A15C28200C17E00 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55FB782A15C28200C17E00 /* Config.swift */; };
+		2B55FB7F2A15D87A00C17E00 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55FB7E2A15D87A00C17E00 /* WeatherService.swift */; };
 		2B5809842A0BE2F400AA97F6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5809832A0BE2F400AA97F6 /* Home.storyboard */; };
 		2B5809892A0BE54B00AA97F6 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5809882A0BE54B00AA97F6 /* DayView.swift */; };
 		2B58098B2A0BE57B00AA97F6 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58098A2A0BE57B00AA97F6 /* DayViewController.swift */; };
@@ -66,6 +67,7 @@
 		2B0534FA2A14472E001CC5E2 /* TemperatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTests.swift; sourceTree = "<group>"; };
 		2B55FB762A15C0CE00C17E00 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
 		2B55FB782A15C28200C17E00 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2B55FB7E2A15D87A00C17E00 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		2B5809832A0BE2F400AA97F6 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2B5809882A0BE54B00AA97F6 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		2B58098A2A0BE57B00AA97F6 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				2BF0FC832A143A9A00C2CA14 /* WeatherForecast.swift */,
 				2B0534F82A14470C001CC5E2 /* Temperature.swift */,
 				2B55FB762A15C0CE00C17E00 /* WeatherClient.swift */,
+				2B55FB7E2A15D87A00C17E00 /* WeatherService.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				2BF0FC842A143A9A00C2CA14 /* WeatherForecast.swift in Sources */,
 				2B58098B2A0BE57B00AA97F6 /* DayViewController.swift in Sources */,
 				2B5809892A0BE54B00AA97F6 /* DayView.swift in Sources */,
+				2B55FB7F2A15D87A00C17E00 /* WeatherService.swift in Sources */,
 				2B55FB792A15C28200C17E00 /* Config.swift in Sources */,
 				2BEE924F2A0A78A50032CEB5 /* AppDelegate.swift in Sources */,
 				2BEE92512A0A78A50032CEB5 /* SceneDelegate.swift in Sources */,
