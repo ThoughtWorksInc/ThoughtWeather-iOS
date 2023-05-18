@@ -1,10 +1,3 @@
-//
-//  TemperatureTests.swift
-//  ThoughtWeatherTests
-//
-//  Created by Michael Chaffee on 2023-05-16.
-//
-
 import Foundation
 import XCTest
 

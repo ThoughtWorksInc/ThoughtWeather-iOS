@@ -1,10 +1,3 @@
-//
-//  WeatherClient.swift
-//  ThoughtWeather
-//
-//  Created by Michael Chaffee on 2023-05-17.
-//
-
 import Foundation
 
 // WeatherClient requests the five-day forecast for the specified location.

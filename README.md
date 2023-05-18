@@ -6,7 +6,7 @@ forecast for that location from https://openweathermap.org/ .  At the moment it'
 ## Do This First
 You'll need a free API key from https://home.openweathermap.org/users/sign_up .  After signup, provisioning takes
 a few minutes, so it's a good idea to start the day by requesting your key.  
-(once you have a key, you can add it to the `Config.appId` property in the codebase, currently marked )
+(once you have a key, you can add it to the `Config.appId` property in the codebase, currently set to "`YOUR_APPID_HERE`")
 
 There isn't any more setup required.  You should be able to open `ThoughtWeather.xcodeproj` and build, test, or run the app without any additional steps.
 
