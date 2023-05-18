@@ -25,7 +25,7 @@ class ForecastDayCell: UITableViewCell {
 
 fileprivate extension Date {
     func toString() -> String {
-        var dateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter.string(from: self)
     }

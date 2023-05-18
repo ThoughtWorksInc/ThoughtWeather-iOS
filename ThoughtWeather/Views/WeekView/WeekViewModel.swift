@@ -10,7 +10,7 @@ import Combine
 import CoreLocation
 
 class WeekViewModel {
-    fileprivate var locationService: LocationServiceType = LocationService()
+    fileprivate var locationService: LocationServiceType = SimpleLocationService()
     fileprivate var dataClient: WeatherClientType = WeatherClient()
     
     fileprivate var forecast: WeatherForecast?
@@ -27,11 +27,6 @@ class WeekViewModel {
     func setup() {
         isLoading = true
         Task { [weak self] in
-            guard let location = await self?.locationService.getLocation() else {
-                fatalError("Could not retrieve device location")
-            }
-            self?.currentLocation = location.coordinate
-            
             self?.isLoading = false
             self?.reloadData()
         }
@@ -40,6 +35,11 @@ class WeekViewModel {
     func reloadData() {
         isLoading = true
         Task { [weak self] in
+            guard let location = await self?.locationService.getLocation() else {
+                fatalError("Could not retrieve device location")
+            }
+            self?.currentLocation = location.coordinate
+            
             guard let latitude = self?.currentLocation?.latitude, let longitude = self?.currentLocation?.longitude else {
                 return
             }

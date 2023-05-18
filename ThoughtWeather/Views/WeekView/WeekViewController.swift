@@ -1,10 +1,3 @@
-//
-//  WeekViewController.swift
-//  ThoughtWeather
-//
-//  Created by Michael Chaffee on 2023-05-10.
-//
-
 import UIKit
 import CoreLocation
 import Combine
@@ -12,9 +5,10 @@ import Combine
 class WeekViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private let refreshControl: UIRefreshControl = UIRefreshControl()
-    
+
     private let viewModel: WeekViewModel = WeekViewModel()
-    
+
+    // https://developer.apple.com/documentation/combine
     private var titleCancellable: AnyCancellable?
     private var dataCancellable: AnyCancellable?
     private var isLoadingCancellable: AnyCancellable?
@@ -85,4 +79,5 @@ extension WeekViewController: UITableViewDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
+
 
