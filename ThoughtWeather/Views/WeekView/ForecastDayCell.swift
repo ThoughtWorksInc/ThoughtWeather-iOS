@@ -16,9 +16,17 @@ class ForecastDayCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func setup(data: ForecastResponse.TimeForecast) {
-        leftLabel.text = data.dtTxt
-        centerLabel.text = data.weather.first?.icon
-        rightLabel.text = "\(Int(data.temperatures.temp))"
+    func setup(data: WeatherForecast.Day) {
+        leftLabel.text = data.date.toString()
+        centerLabel.text = "Lo: \(Int(data.lowTemperature?.celsius ?? 0))"
+        rightLabel.text = "Hi: \(Int(data.highTemperature?.celsius ?? 0))"
+    }
+}
+
+fileprivate extension Date {
+    func toString() -> String {
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: self)
     }
 }

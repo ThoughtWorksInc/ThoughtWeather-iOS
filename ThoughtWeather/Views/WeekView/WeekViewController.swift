@@ -14,7 +14,13 @@ class WeekViewController: UIViewController {
     var locationService: LocationServiceType = LocationService()
     var data: WeatherClientType = WeatherClient()
     
-    var items: [ForecastResponse.TimeForecast] = []
+    var forecast: WeatherForecast? {
+        didSet {
+            guard let cityName = forecast?.cityName else { return }
+            self.title = "Weather for \(cityName)"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,12 +35,11 @@ class WeekViewController: UIViewController {
             let latitude = location.coordinate.latitude
             let longitude = location.coordinate.longitude
             
-            let response = try! await self?.data.getForecast(latitude: latitude, longitude: longitude)?.timeForecasts.filter({ item in
-                item.dtTxt.contains("00:00:00")
-            })
+            let response = try! await self?.data.getForecast(latitude: latitude, longitude: longitude)!
+
             print(response)
             if let responseValid = response {
-                items = responseValid
+                self?.forecast = responseValid
                 self?.tableView.reloadData()
             }
         }
@@ -43,14 +48,14 @@ class WeekViewController: UIViewController {
 
 extension WeekViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items.count
+        forecast?.days.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tmp = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? ForecastDayCell
         
         guard let cell = tmp else { fatalError("ForecastDayCell is not properly registered.")}
-        let weatherInfo = items[indexPath.row]
+        let weatherInfo = forecast!.days[indexPath.row]
         cell.setup(data: weatherInfo)
         return cell
     }

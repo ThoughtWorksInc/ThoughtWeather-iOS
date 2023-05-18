@@ -7,8 +7,11 @@
 
 import Foundation
 
+// WeatherClient requests the five-day forecast for the specified location.
+// That forecast is returned in a response DTO of type ForecastResponse, which mirrors the JSON payload.
+// WeatherClient then transforms the ForecastResponse to a WeatherForecast domain object and returns it.
 class WeatherClient: WeatherClientType {
-    func getForecast(latitude: Double, longitude: Double) async throws -> ForecastResponse? {
+    func getForecast(latitude: Double, longitude: Double) async throws -> WeatherForecast? {
         let urlString = [
                     "https://api.openweathermap.org/data/2.5/forecast",
                     "?lat=\(latitude)",
@@ -22,6 +25,7 @@ class WeatherClient: WeatherClientType {
 
         let (data, _) = try await URLSession.shared.data(from: url)
 
-        return try JSONDecoder().decode(ForecastResponse.self, from: data)
+        let forecastResponse = try JSONDecoder().decode(ForecastResponse.self, from: data)
+        return WeatherForecast(forecastResponse: forecastResponse)
     }
 }

@@ -3,10 +3,12 @@ import Foundation
 // WeatherForecast is a domain object for the weather forecast.
 // The initializer translates from a ForecastResponse DTO into this domain object.
 struct WeatherForecast {
+    let cityName: String
     let allItems: [HourlyItem]
     let days: [Day]
     
     init(forecastResponse: ForecastResponse) {
+        self.cityName = forecastResponse.city.name
         self.allItems = forecastResponse.timeForecasts.map { HourlyItem(pointForecast: $0) }
         self.days = WeatherForecast.buildDays(hourlyItems: self.allItems)
     }
