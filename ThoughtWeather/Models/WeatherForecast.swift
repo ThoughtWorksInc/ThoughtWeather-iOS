@@ -2,6 +2,7 @@ import Foundation
 
 // WeatherForecast is a domain object for the weather forecast.
 // The initializer translates from a ForecastResponse DTO into this domain object.
+// - MARK: WeatherForecast
 struct WeatherForecast {
     let cityName: String
     let allItems: [HourlyItem]
@@ -39,6 +40,9 @@ struct WeatherForecast {
         return result
     }
     
+    // - MARK: WeatherForecast.Day
+    // WeatherForecast.Day represents an aggregation of all the hourly-forecast items
+    // from the API response.  There's one record per calendar date of the forecast.
     struct Day {
         let date: Date
         let highTemperature: Temperature?
@@ -46,8 +50,11 @@ struct WeatherForecast {
         let hourlyItems: [HourlyItem]
     }
     
+    // - MARK: WeatherForecast.HourlyItem
+    // WeatherForecast.HourlyItem represents one three-hour window from the hourly-forecast
+    // response.
     struct HourlyItem {
-        let date: Date
+        let date: Date  // TODO rename to dateTime
         let temperature: Temperature
         let lowTemperature: Temperature
         let highTemperature: Temperature

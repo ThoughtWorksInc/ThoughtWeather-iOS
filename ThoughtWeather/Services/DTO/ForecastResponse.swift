@@ -1,6 +1,11 @@
 // This file was generated from JSON Schema using quicktype.io.
 // It's based on the schema returned by https://api.openweathermap.org/data/2.5/forecast?lat=[latitude]&lon=[longitude]&appid=[appId]
 
+// ForecastResponse is a DTO representing the weather-forecast response from OpenWeather.
+// This struct's only job is to tell the application how to deserialize the forecast response.
+// Responses are transformed into WeatherForecast structs by the WeatherService class,
+// and those WeatherForecast structs are pure domain objects which can be used by the application.
+
 import Foundation
 
 // MARK: - ForecastResponse

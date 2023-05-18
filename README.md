@@ -1,3 +1,14 @@
+# ThoughtWeather
+This is a simple iOS application that uses CoreLocation to determine the user's location, and then retrieves a weather
+forecast for that location from https://openweathermap.org/ .
+
+## Do This First
+You'll need a free API key from https://home.openweathermap.org/users/sign_up .  After signup, provisioning takes
+a few minutes, so it's a good idea to start by requesting your key.
+
+## Tips/Tricks
+To see the weather where you live, it's possible to change the virtual device location: In the Simulator application, simply select Features | Location
+
 ## The Brief
 ### We'll replace this with a proper README soon :)
 Regarding the project of the 5th day, I was thinking of the cliche weather app.
@@ -13,9 +24,9 @@ Then we would ask them to achieve the following:
 - Current plan is to use https://openweathermap.org/ as a datasource.
 
 ## TODO
-- Get user's current location using CoreLocation (current thinking is to use an async/await wrapper)
 - Render five-day weather forecast for user's current location in WeekView
   - Possibly also add detailed current conditions?
 - Segue to DayView when a WeekView cell is tapped
 - Render detailed forecast for user's current location in DayView
 - [maybe] Create a SwiftUI version in a different branch
+
