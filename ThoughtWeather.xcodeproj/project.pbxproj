@@ -16,6 +16,8 @@
 		2B04FED02A0DDB880023B1B3 /* StubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B04FECF2A0DDB880023B1B3 /* StubData.swift */; };
 		2B0534F92A14470C001CC5E2 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0534F82A14470C001CC5E2 /* Temperature.swift */; };
 		2B0534FB2A14472E001CC5E2 /* TemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0534FA2A14472E001CC5E2 /* TemperatureTests.swift */; };
+		2B55FB772A15C0CE00C17E00 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55FB762A15C0CE00C17E00 /* WeatherClient.swift */; };
+		2B55FB792A15C28200C17E00 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55FB782A15C28200C17E00 /* Config.swift */; };
 		2B5809842A0BE2F400AA97F6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5809832A0BE2F400AA97F6 /* Home.storyboard */; };
 		2B5809892A0BE54B00AA97F6 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5809882A0BE54B00AA97F6 /* DayView.swift */; };
 		2B58098B2A0BE57B00AA97F6 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58098A2A0BE57B00AA97F6 /* DayViewController.swift */; };
@@ -32,7 +34,6 @@
 		2BEE92662A0A78A70032CEB5 /* ThoughtWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE92652A0A78A70032CEB5 /* ThoughtWeatherTests.swift */; };
 		2BEE92702A0A78A70032CEB5 /* ThoughtWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE926F2A0A78A70032CEB5 /* ThoughtWeatherUITests.swift */; };
 		2BEE92722A0A78A70032CEB5 /* ThoughtWeatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE92712A0A78A70032CEB5 /* ThoughtWeatherUITestsLaunchTests.swift */; };
-		2BF0FC822A143A5700C2CA14 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0FC812A143A5700C2CA14 /* WeatherService.swift */; };
 		2BF0FC842A143A9A00C2CA14 /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0FC832A143A9A00C2CA14 /* WeatherForecast.swift */; };
 		2BF0FC862A143ABD00C2CA14 /* WeatherForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0FC852A143ABD00C2CA14 /* WeatherForecastTests.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,8 @@
 		2B04FECF2A0DDB880023B1B3 /* StubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubData.swift; sourceTree = "<group>"; };
 		2B0534F82A14470C001CC5E2 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		2B0534FA2A14472E001CC5E2 /* TemperatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTests.swift; sourceTree = "<group>"; };
+		2B55FB762A15C0CE00C17E00 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
+		2B55FB782A15C28200C17E00 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2B5809832A0BE2F400AA97F6 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2B5809882A0BE54B00AA97F6 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		2B58098A2A0BE57B00AA97F6 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +87,6 @@
 		2BEE926B2A0A78A70032CEB5 /* ThoughtWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThoughtWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEE926F2A0A78A70032CEB5 /* ThoughtWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtWeatherUITests.swift; sourceTree = "<group>"; };
 		2BEE92712A0A78A70032CEB5 /* ThoughtWeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtWeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2BF0FC812A143A5700C2CA14 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		2BF0FC832A143A9A00C2CA14 /* WeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
 		2BF0FC852A143ABD00C2CA14 /* WeatherForecastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 				2BD6270E2A1405BE00FEA77D /* DTO */,
 				2B04FEC32A0DD75C0023B1B3 /* Weather */,
 				2B04FEBE2A0DD6400023B1B3 /* Location */,
+				2B55FB782A15C28200C17E00 /* Config.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -139,9 +142,9 @@
 			children = (
 				2B04FEC42A0DD7B30023B1B3 /* WeatherClientType.swift */,
 				2B04FECA2A0DD9190023B1B3 /* StubWeatherClient.swift */,
-				2BF0FC812A143A5700C2CA14 /* WeatherService.swift */,
 				2BF0FC832A143A9A00C2CA14 /* WeatherForecast.swift */,
 				2B0534F82A14470C001CC5E2 /* Temperature.swift */,
+				2B55FB762A15C0CE00C17E00 /* WeatherClient.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -392,10 +395,11 @@
 				2BF0FC842A143A9A00C2CA14 /* WeatherForecast.swift in Sources */,
 				2B58098B2A0BE57B00AA97F6 /* DayViewController.swift in Sources */,
 				2B5809892A0BE54B00AA97F6 /* DayView.swift in Sources */,
+				2B55FB792A15C28200C17E00 /* Config.swift in Sources */,
 				2BEE924F2A0A78A50032CEB5 /* AppDelegate.swift in Sources */,
 				2BEE92512A0A78A50032CEB5 /* SceneDelegate.swift in Sources */,
 				2B0534F92A14470C001CC5E2 /* Temperature.swift in Sources */,
-				2BF0FC822A143A5700C2CA14 /* WeatherService.swift in Sources */,
+				2B55FB772A15C0CE00C17E00 /* WeatherClient.swift in Sources */,
 				2B04FEC22A0DD68B0023B1B3 /* StubLocationService.swift in Sources */,
 				2B04FED02A0DDB880023B1B3 /* StubData.swift in Sources */,
 			);

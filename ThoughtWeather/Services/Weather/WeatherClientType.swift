@@ -8,5 +8,5 @@
 import Foundation
 
 protocol WeatherClientType {
-    func getForecast(latitude: Double, longitude: Double) async -> ForecastResponse?
+    func getForecast(latitude: Double, longitude: Double) async throws -> ForecastResponse?
 }
