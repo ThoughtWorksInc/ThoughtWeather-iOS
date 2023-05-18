@@ -12,7 +12,7 @@ struct WeatherForecast {
     let days: [Day]
     
     init(forecastResponse: ForecastResponse) {
-        self.allItems = forecastResponse.list.map { HourlyItem(pointForecast: $0) }
+        self.allItems = forecastResponse.timeForecasts.map { HourlyItem(pointForecast: $0) }
         self.days = WeatherForecast.buildDays(hourlyItems: self.allItems)
     }
 
@@ -55,11 +55,11 @@ struct WeatherForecast {
         let lowTemperature: Temperature
         let highTemperature: Temperature
         
-        init(pointForecast: ForecastResponse.PointForecast) {
+        init(pointForecast: ForecastResponse.TimeForecast) {
             self.date = Date(timeIntervalSince1970: Double(pointForecast.dt))
-            self.temperature = Temperature(kelvin: pointForecast.main.temp)
-            self.lowTemperature = Temperature(kelvin: pointForecast.main.tempMin)
-            self.highTemperature = Temperature(kelvin: pointForecast.main.tempMax)
+            self.temperature = Temperature(kelvin: pointForecast.temperatures.temp)
+            self.lowTemperature = Temperature(kelvin: pointForecast.temperatures.tempMin)
+            self.highTemperature = Temperature(kelvin: pointForecast.temperatures.tempMax)
         }
     }
 }

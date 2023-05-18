@@ -23,9 +23,9 @@ class ForecastDayCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func setup(data: ForecastResponse.PointForecast) {
+    func setup(data: ForecastResponse.TimeForecast) {
         leftLabel.text = data.dtTxt
         centerLabel.text = data.weather.first?.icon
-        rightLabel.text = "\(Int(data.main.temp))"
+        rightLabel.text = "\(Int(data.temperatures.temp))"
     }
 }

@@ -28,7 +28,7 @@ final class WeatherForecastTests: XCTestCase {
 
     func testShouldInstantiateHourlyItemFromPointForecast() {
         let unixDate = 1684270800
-        let pointForecast = StubData.Brooklyn.forecastResponse!.list.first(where: { $0.dt == unixDate } )!
+        let pointForecast = StubData.Brooklyn.forecastResponse!.timeForecasts.first(where: { $0.dt == unixDate } )!
         let hourlyItem = WeatherForecast.HourlyItem(pointForecast: pointForecast)
         let expectedDate = Date(timeIntervalSince1970: Double(unixDate))
 

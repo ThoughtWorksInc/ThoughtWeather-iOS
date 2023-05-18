@@ -12,7 +12,7 @@ class WeekViewController: UIViewController {
     
     var data: WeatherClientType = StubWeatherClient()
     
-    var items: [ForecastResponse.PointForecast] = []
+    var items: [ForecastResponse.TimeForecast] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +21,7 @@ class WeekViewController: UIViewController {
         tableView.dataSource = self
         
         Task { [weak self] in
-            let response = await self?.data.getForecast(latitude: 1.0, longitude: 1.0)?.list.filter({ item in
+            let response = await self?.data.getForecast(latitude: 1.0, longitude: 1.0)?.timeForecasts.filter({ item in
                 item.dtTxt.contains("00:00:00")
             })
             print(response)

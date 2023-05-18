@@ -26,8 +26,7 @@ final class StubDataTests: XCTestCase {
 
     func testShouldLoadGoodForecast() throws {
         let forecastResponse = StubData.Brooklyn.forecastResponse
-        XCTAssertEqual("200", forecastResponse?.cod)
-        XCTAssertEqual(297.95, forecastResponse?.list.first?.main.temp)
+        XCTAssertEqual(297.95, forecastResponse?.timeForecasts.first?.temperatures.temp)
     }
 
 }
