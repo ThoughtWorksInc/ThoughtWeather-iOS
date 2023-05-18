@@ -140,8 +140,6 @@
 			children = (
 				2B04FEC42A0DD7B30023B1B3 /* WeatherClientType.swift */,
 				2B04FECA2A0DD9190023B1B3 /* StubWeatherClient.swift */,
-				2BF0FC832A143A9A00C2CA14 /* WeatherForecast.swift */,
-				2B0534F82A14470C001CC5E2 /* Temperature.swift */,
 				2B55FB762A15C0CE00C17E00 /* WeatherClient.swift */,
 			);
 			path = Weather;
@@ -157,9 +155,19 @@
 			path = StubData;
 			sourceTree = "<group>";
 		};
+		2B55FB802A16812E00C17E00 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BF0FC832A143A9A00C2CA14 /* WeatherForecast.swift */,
+				2B0534F82A14470C001CC5E2 /* Temperature.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2B5809852A0BE52200AA97F6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2B5809832A0BE2F400AA97F6 /* Home.storyboard */,
 				2B5809872A0BE53600AA97F6 /* DayView */,
 				2B5809862A0BE52E00AA97F6 /* WeekView */,
 			);
@@ -215,15 +223,15 @@
 		2BEE924D2A0A78A50032CEB5 /* ThoughtWeather */ = {
 			isa = PBXGroup;
 			children = (
-				2B04FECE2A0DDB7C0023B1B3 /* StubData */,
-				2B04FEBB2A0DB7480023B1B3 /* Services */,
+				2B55FB802A16812E00C17E00 /* Models */,
 				2B5809852A0BE52200AA97F6 /* Views */,
+				2B04FEBB2A0DB7480023B1B3 /* Services */,
+				2B04FECE2A0DDB7C0023B1B3 /* StubData */,
 				2BEE924E2A0A78A50032CEB5 /* AppDelegate.swift */,
 				2BEE92502A0A78A50032CEB5 /* SceneDelegate.swift */,
 				2BEE92572A0A78A60032CEB5 /* Assets.xcassets */,
 				2BEE92592A0A78A60032CEB5 /* LaunchScreen.storyboard */,
 				2BEE925C2A0A78A60032CEB5 /* Info.plist */,
-				2B5809832A0BE2F400AA97F6 /* Home.storyboard */,
 			);
 			path = ThoughtWeather;
 			sourceTree = "<group>";

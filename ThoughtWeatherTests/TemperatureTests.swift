@@ -47,4 +47,10 @@ final class TemperatureTests: XCTestCase {
         XCTAssertGreaterThan(Temperature(celsius: 20.0), Temperature(celsius: 10.0))
         XCTAssertEqual(Temperature(celsius: 0.0), Temperature(celsius: 0.0))
     }
+    
+    func testShouldMakeNiceString() {
+        let temperatureString: String = Temperature(kelvin: 100.33333333).description
+        
+        XCTAssertEqual(temperatureString, "100.33°K")
+    }
 }
