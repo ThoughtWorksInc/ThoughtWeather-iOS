@@ -20,23 +20,14 @@ class WeekViewModel {
     @Published var data: [WeatherForecast.Day] = []
     @Published var isLoading: Bool = false
     
-    init() {
-        
-    }
-    
-    func setup() {
-        isLoading = true
-        Task { [weak self] in
-            self?.isLoading = false
-            self?.reloadData()
-        }
-    }
+    init() {}
     
     func reloadData() {
         isLoading = true
         Task { [weak self] in
             guard let location = await self?.locationService.getLocation() else {
-                fatalError("Could not retrieve device location")
+                self?.title = "Could not retrieve device location"
+                return
             }
             self?.currentLocation = location.coordinate
             

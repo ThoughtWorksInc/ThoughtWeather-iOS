@@ -48,7 +48,7 @@ class WeekViewController: UIViewController {
             }
         })
         
-        viewModel.setup()
+        viewModel.reloadData()
     }
     
     @objc private func refreshData() {
