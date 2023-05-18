@@ -26,7 +26,6 @@
 		2BD627102A1405D100FEA77D /* ForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD6270F2A1405D100FEA77D /* ForecastResponse.swift */; };
 		2BD627122A14084600FEA77D /* BrooklynForecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BD627112A14084600FEA77D /* BrooklynForecast.json */; };
 		2BD627142A1408EC00FEA77D /* StubDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD627132A1408EC00FEA77D /* StubDataTests.swift */; };
-		2BD627192A140CE500FEA77D /* BrooklynCurrentConditions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BD627182A140CE500FEA77D /* BrooklynCurrentConditions.json */; };
 		2BEE924F2A0A78A50032CEB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE924E2A0A78A50032CEB5 /* AppDelegate.swift */; };
 		2BEE92512A0A78A50032CEB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE92502A0A78A50032CEB5 /* SceneDelegate.swift */; };
 		2BEE92582A0A78A60032CEB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BEE92572A0A78A60032CEB5 /* Assets.xcassets */; };
@@ -75,7 +74,6 @@
 		2BD6270F2A1405D100FEA77D /* ForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastResponse.swift; sourceTree = "<group>"; };
 		2BD627112A14084600FEA77D /* BrooklynForecast.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BrooklynForecast.json; sourceTree = "<group>"; };
 		2BD627132A1408EC00FEA77D /* StubDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataTests.swift; sourceTree = "<group>"; };
-		2BD627182A140CE500FEA77D /* BrooklynCurrentConditions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BrooklynCurrentConditions.json; sourceTree = "<group>"; };
 		2BEE924B2A0A78A50032CEB5 /* ThoughtWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEE924E2A0A78A50032CEB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BEE92502A0A78A50032CEB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				2B04FECF2A0DDB880023B1B3 /* StubData.swift */,
 				2B04FECC2A0DD9670023B1B3 /* Brooklyn.swift */,
 				2BD627112A14084600FEA77D /* BrooklynForecast.json */,
-				2BD627182A140CE500FEA77D /* BrooklynCurrentConditions.json */,
 			);
 			path = StubData;
 			sourceTree = "<group>";
@@ -355,7 +352,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BD627192A140CE500FEA77D /* BrooklynCurrentConditions.json in Resources */,
 				2BD627122A14084600FEA77D /* BrooklynForecast.json in Resources */,
 				2BEE925B2A0A78A60032CEB5 /* LaunchScreen.storyboard in Resources */,
 				2BEE92582A0A78A60032CEB5 /* Assets.xcassets in Resources */,
