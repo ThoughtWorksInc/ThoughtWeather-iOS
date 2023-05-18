@@ -6,17 +6,55 @@
 //
 
 import Foundation
+import Combine
+import CoreLocation
 
 class WeekViewModel {
-    let weatherForecast: WeatherForecast
-
-    var forecastDays: [WeatherForecast.Day] {
-        self.weatherForecast.days.sorted {
-            $0.date < $1.date
+    fileprivate var locationService: LocationServiceType = LocationService()
+    fileprivate var dataClient: WeatherClientType = WeatherClient()
+    
+    fileprivate var forecast: WeatherForecast?
+    fileprivate var currentLocation: CLLocationCoordinate2D? = nil
+    
+    @Published var title: String = ""
+    @Published var data: [WeatherForecast.Day] = []
+    @Published var isLoading: Bool = false
+    
+    init() {
+        
+    }
+    
+    func setup() {
+        isLoading = true
+        Task { [weak self] in
+            guard let location = await self?.locationService.getLocation() else {
+                fatalError("Could not retrieve device location")
+            }
+            self?.currentLocation = location.coordinate
+            
+            self?.isLoading = false
+            self?.reloadData()
         }
     }
     
-    init(weatherForecast: WeatherForecast) {
-        self.weatherForecast = weatherForecast
+    func reloadData() {
+        isLoading = true
+        Task { [weak self] in
+            guard let latitude = self?.currentLocation?.latitude, let longitude = self?.currentLocation?.longitude else {
+                return
+            }
+            
+            let response = try? await self?.dataClient.getForecast(latitude: latitude, longitude: longitude)
+            
+            guard let response = response else {
+                self?.title = "Error fetching forecast"
+                return
+            }
+            
+            self?.forecast = response
+            self?.title = response.cityName
+            self?.data = response.days
+            self?.isLoading = false
+        }
     }
 }
