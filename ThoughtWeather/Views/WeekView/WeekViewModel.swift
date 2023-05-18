@@ -1,10 +1,3 @@
-//
-//  WeekViewModel.swift
-//  ThoughtWeather
-//
-//  Created by Michael Chaffee on 2023-05-17.
-//
-
 import Foundation
 import Combine
 import CoreLocation

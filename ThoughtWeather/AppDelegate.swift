@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  ThoughtWeather
-//
-//  Created by Michael Chaffee on 2023-05-09.
-//
-
 import UIKit
 
 @main

@@ -1,7 +1,8 @@
 import Foundation
 import CoreLocation
 
-// LocationService is a simple wrapper that converts CLLocationManager's delegate events
+// - MARK: SimpleLocationService
+// SimpleLocationService is a wrapper that converts CLLocationManager's delegate events
 // into a more modern async/await pattern.  It does the job but needs hardening before use
 // in a production app.
 class SimpleLocationService: NSObject, LocationServiceType {
@@ -74,6 +75,7 @@ class SimpleLocationService: NSObject, LocationServiceType {
     }
 }
 
+// MARK: CLLocationManagerDelegate
 extension SimpleLocationService: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         self.locationAuthorizationHandler?(manager)
@@ -87,6 +89,7 @@ extension SimpleLocationService: CLLocationManagerDelegate {
         self.locationHandler?(nil, error)
     }}
 
+// - MARK: LocationError
 enum LocationError: Error {
     case denied
     case restricted
